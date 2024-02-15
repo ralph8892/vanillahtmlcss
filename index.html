@@ -6,6 +6,97 @@
   <title>Vanilla HTML CSS Grid</title>
 </head>
 <body>
+  <header>HEADER</header>
+  <div class="wrapper">
+    <sidebar>SIDEBAR</sidebar>
+    <main>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+      <div>ITEM</div>
+    </main>
+  </div>
   
+  <footer>FOOTER</footer>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #900C3F;
+      color: #FFF;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      min-height: 80vh;
+    }
+
+    sidebar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFC300;
+      color: #FFF;
+      min-width: 300px;
+    }
+
+    main {
+      background-color: #F4E3DF;
+      padding: 1em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-gap: 1em;
+      grid-auto-rows: 200px;
+    }
+
+    main > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #C70039;
+      color: #FFF;
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #581845;
+      color: #FFF;
+    }
+
+    header, footer {
+      height: 10vh;
+    }
+
+    @media (max-width: 700px) {
+      sidebar {
+        display: none;
+      }
+
+      .wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </body>
 </html>
